@@ -1,5 +1,16 @@
 
-CREATE TABLE Cliente (
+CREATE TABLE Client (
                          ID SERIAL PRIMARY KEY,
-                         Nome VARCHAR(255) NOT NULL
+                         name VARCHAR(255) NOT NULL
 );
+
+CREATE TABLE Address (
+                         id SERIAL PRIMARY KEY,
+                         street VARCHAR(255) NOT NULL,
+                         city VARCHAR(255) NOT NULL,
+                         client_id BIGINT REFERENCES Client(id) -- Foreign key to client
+);
+
+
+INSERT INTO Client (name) VALUES ('Teste');
+INSERT INTO Address (street, city, client_id) VALUES ('123 Main Street', 'Cityville', 1);
