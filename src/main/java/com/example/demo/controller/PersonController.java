@@ -1,22 +1,22 @@
 package com.example.demo.controller;
 
-import com.example.demo.service.ClientService;
+import com.example.demo.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping("/clients")
+@RequestMapping("/persons")
 @RestController
-public class ClientController {
+public class PersonController {
 
     @Autowired
-    private ClientService clientService;
+    private PersonService personService;
 
     @GetMapping("/hello")
-    public String getClients() {
+    public String getPerson() {
         try {
-            return clientService.findClienteByName("Teste").toString();
+            return personService.findPersonByName("Teste").toString();
         } catch (Exception e) {
             return "Error: " + e.getMessage();
         }

@@ -1,7 +1,12 @@
 
-CREATE TABLE Client (
-                         ID SERIAL PRIMARY KEY,
-                         name VARCHAR(255) NOT NULL
+--CREATE TABLE Client (
+--                         ID SERIAL PRIMARY KEY,
+--                         name VARCHAR(255) NOT NULL
+--);
+CREATE TABLE Person (
+                           ID SERIAL PRIMARY KEY,
+                           name VARCHAR(255) NOT NULL,
+                           assignment_code INTEGER NULL
 );
 
 CREATE TABLE Address (
