@@ -17,7 +17,7 @@ After, you can start and build the API.
 
 * [x] Create a Address
 * [x] Create a Client
-* [] Create a Person Class, remove Client
+* [x] Create a Person Class, remove Client
 * [] Create a Appointment, relate with Person
 * [] Relate People x Address x Apṕointment
 * [] Create CRUD OPERATIONS.
